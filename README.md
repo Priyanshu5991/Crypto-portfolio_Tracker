@@ -1,147 +1,70 @@
-#  Crypto Portfolio Tracker
+# Getting Started with Create React App
 
-A full-stack web application that allows users to manage, monitor, and track their cryptocurrency investments in real-time. The application provides secure login functionality, live market price updates, and a clean, interactive dashboard for portfolio management.
-This project was built during my internship to demonstrate full-stack development skills, integration of real-time APIs, and the ability to design scalable systems from scratch.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
-Overview
-Cryptocurrency investors often need a centralized, live, and user-friendly tool to manage their holdings. This tracker allows users to:
-- Add various crypto assets to their personal portfolio
-- Monitor the real-time value of those assets
-- Calculate total portfolio value based on market fluctuations
-- View intuitive and responsive dashboards
-- 
----
-Features
-- Secure User Authentication 
-  Using JWT tokens for stateless and protected user access
-- Real-Time Crypto Price Tracking 
-  Integrated with APIs like CoinGecko to fetch live market prices
-- Portfolio Management
-  Add, update, or remove crypto assets to simulate your investments
-- Interactive Dashboard
-  View dynamic updates to asset value and portfolio performance
-- Frontend-Backend Sync
-  Smooth RESTful communication between Flask and React
+## Available Scripts
 
----
-Tech Stack
-| Layer       | Technology                        |
-|-------------|-----------------------------------|
-| Frontend    | React, JavaScript, Axios          |
-| Backend     | Python, Flask, REST APIs          |
-| Auth        | JWT (JSON Web Tokens)             |
-| API Source  | CoinGecko / CoinMarketCap         |
-| Tools       | Postman, Git, VS Code, Node.js    |
+In the project directory, you can run:
 
----
-Project Structure
-```
-crypto\_portfolio\_tracker/
-├── run.py                     # Entry point for Flask backend
-├── requirements.txt           # Backend dependencies
-├── backend/
-│   ├── **init**.py            # Flask app setup
-│   ├── routes.py              # Auth and portfolio endpoints
-│   ├── models.py              # User and asset data models
-│   └── utils.py               # API handlers and helpers
-├── frontend/
-│   ├── package.json           # Frontend dependencies
-│   ├── public/                # Static files
-│   └── src/                   # React components
+### `npm start`
 
-````
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
----
-Getting Started
-Backend Setup
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/crypto-portfolio-tracker.git
-    cd crypto_portfolio_tracker
-    ```
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-2. Create and activate virtual environment:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # Linux/macOS
-    venv\Scripts\activate     # Windows
-    ```
+### `npm test`
 
-3. Install Python dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-4. Run the Flask server:
-    ```bash
-    python run.py
-    ```
+### `npm run build`
 
-Frontend Setup
-1. Navigate to frontend directory:
-    ```bash
-    cd frontend
-    ```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-2. Install frontend dependencies:
-    ```bash
-    npm install
-    ```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-3. Start the frontend server:
-    ```bash
-    npm start
-    ```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
----
-API Endpoints (Backend)
-| Method | Endpoint          | Description                          |
-|--------|-------------------|--------------------------------------|
-| POST   | `/register`       | Create a new user                    |
-| POST   | `/login`          | Authenticate user and return JWT     |
-| GET    | `/portfolio`      | Get user's portfolio (JWT required)  |
-| POST   | `/portfolio`      | Add asset to portfolio               |
-| DELETE | `/portfolio/<id>` | Remove asset from portfolio          |
+### `npm run eject`
 
----
-What I Learned
-- Full-stack development using Flask and React
-- API integration with real-time data
-- Token-based authentication and session security
-- Building scalable, modular web architectures
-- Handling asynchronous data and frontend-backend sync
-- Debugging complex data flows and managing component state
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
----
-Challenges Faced
-| Challenge                             | Solution                                                                 |
-|--------------------------------------|--------------------------------------------------------------------------|
-| Real-time API rate limits            | Added retry logic and basic caching to reduce external API dependency    |
-| User session and authentication      | Implemented secure JWT token system for authentication                   |
-| Data sync between frontend/backend   | Used consistent REST schema and Axios with error handling                |
-| Portfolio state updates              | Optimized React component updates with `useEffect()` and state hooks     |
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
----
-Future Enhancements
-- Wallet address auto-sync (via blockchain APIs)
-- Charting portfolio trends using Chart.js or Recharts
-- Push notifications for price alerts
-- Enhanced admin dashboard
-- Deployment via Docker or cloud hosting (e.g., Vercel/Render)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
----
-Contributing
-Contributions, suggestions, and improvements are welcome!  
-Please open an issue or submit a pull request.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
----
- License
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+## Learn More
 
----
-Developer
-Priyanshu Tonk
-📌 Passionate about full-stack development, crypto tech, and real-time applications  
-🔗 [LinkedIn](https://www.linkedin.com/in/priyanshu-in002004/)  
-📧 Email: priyanshutonk.in@gmail.com
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
